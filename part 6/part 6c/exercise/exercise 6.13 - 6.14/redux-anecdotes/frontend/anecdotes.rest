@@ -1,0 +1,7 @@
+POST http://localhost:3001/anecdotes
+Content-Type: application/json
+
+{
+  "content": "reandom content",
+  "votes": 3
+}
