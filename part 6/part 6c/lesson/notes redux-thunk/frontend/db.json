@@ -1,0 +1,54 @@
+{
+  "notes": [
+    {
+      "content": "the app state is in redux store",
+      "important": true,
+      "id": 1
+    },
+    {
+      "content": "state changes are made with actions",
+      "important": false,
+      "id": 2
+    },
+    {
+      "content": "why so many sd here?",
+      "important": false,
+      "id": 3
+    },
+    {
+      "content": "i found some empty line here",
+      "important": false,
+      "id": 4
+    },
+    {
+      "content": "why so many sd here?",
+      "important": false,
+      "id": 5
+    },
+    {
+      "content": "",
+      "important": false,
+      "id": 6
+    },
+    {
+      "content": "",
+      "important": false,
+      "id": 7
+    },
+    {
+      "content": "i found some empty line here",
+      "important": false,
+      "id": 8
+    },
+    {
+      "content": "why so many sd here?",
+      "important": false,
+      "id": 9
+    },
+    {
+      "content": "random text",
+      "important": false,
+      "id": 10
+    }
+  ]
+}
