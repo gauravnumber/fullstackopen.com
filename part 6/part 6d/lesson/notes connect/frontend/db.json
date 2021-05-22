@@ -1,0 +1,39 @@
+{
+  "notes": [
+    {
+      "content": "the app state is in redux store",
+      "important": true,
+      "id": 1
+    },
+    {
+      "content": "state changes are made with actions",
+      "important": false,
+      "id": 2
+    },
+    {
+      "content": "why so many sd here?",
+      "important": false,
+      "id": 3
+    },
+    {
+      "content": "I love myself",
+      "important": true,
+      "id": 4
+    },
+    {
+      "content": "why so many sd here?",
+      "important": false,
+      "id": 5
+    },
+    {
+      "content": "i can add note with using connect",
+      "important": false,
+      "id": 6
+    },
+    {
+      "content": "i found some empty line here",
+      "important": false,
+      "id": 7
+    }
+  ]
+}
