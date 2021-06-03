@@ -1,0 +1,12 @@
+POST http://localhost:3003/api/blogs HTTP/1.1
+Content-Type: application/json
+# Authorization: 'bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhbmRvbSIsImlkIjoiNjA4MmUwNDcwNDdjMWUxNzZlNDA0MzQyIiwiaWF0IjoxNjE5OTcyNTUzfQ.wElBmjQJ3kBJbdnvy27vo_hsNjLai4t6fJmt81T4jzc'
+
+{
+  "title": "titleName vscode",
+  "author": "authorName vscode",
+  "url": "https://www.vscode.com/",
+  "likes": 23
+}
+###
+GET http://localhost:3003/api/blogs HTTP/1.1
