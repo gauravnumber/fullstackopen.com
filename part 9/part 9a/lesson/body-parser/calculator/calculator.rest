@@ -1,0 +1,20 @@
+POST http://localhost:3003/calculate HTTP/1.1
+Content-Type: application/json
+
+# {
+#   "weight": 56,
+#   "height": 190,
+
+# }
+
+# {
+#   value1: 12,
+#   value2: 11,
+#   op: "add"
+# }
+
+{
+  "value1": 12,
+  "value2": 11,
+  "op": "add"
+}
