@@ -61,9 +61,14 @@ const App = () => {
       id: notes.length + 1
     }
 
+    console.log('noteObject', noteObject)
+    // console.log('window.localStorage.getItem  ', window.localStorage.getItem('loggedNoteappUser'))
+
     noteService
       .create(noteObject)
       .then(returnedNote => {
+        console.log('returnedNote', returnedNote)
+
         setNotes(notes.concat(noteObject))
         setNewNote("")
       })
@@ -89,7 +94,7 @@ const App = () => {
       window.localStorage.setItem(
         'loggedNoteappUser', JSON.stringify(user)
       )
-      
+
       noteService.setToken(user.token)
       setUser(user)
       setUsername('')
@@ -108,7 +113,7 @@ const App = () => {
     <form onSubmit={handleLogin}>
       <div>
         username
-            <input
+        <input
           type="text"
           value={username}
           name="Username"
@@ -117,7 +122,7 @@ const App = () => {
       </div>
       <div>
         password
-            <input
+        <input
           type="password"
           value={password}
           name="Password"
@@ -148,8 +153,8 @@ const App = () => {
       <h1>Notes</h1>
       <Notification message={errorMessage} />
 
-      {user === null ? 
-        loginForm() : 
+      {user === null ?
+        loginForm() :
         <div>
           <p>{user.username} logged-in</p>
           {noteForm()}

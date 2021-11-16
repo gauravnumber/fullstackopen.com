@@ -16,12 +16,20 @@ const getAll = () => {
 
 const create = (newObject) => {
 	const request = axios.post(baseUrl, newObject)
-    return request.then(response => response.data)
+
+	console.log('newObject', newObject)
+	console.log('request', request)
+
+	return request.then(response => {
+		console.log('response', response)
+
+		return response.data
+	})
 }
 
 const update = (id, newObject) => {
 	const request = axios.put(`${baseUrl}/${id}`, newObject)
-    return request.then(response => response.data)
+	return request.then(response => response.data)
 }
 
 export default { getAll, create, update, setToken }

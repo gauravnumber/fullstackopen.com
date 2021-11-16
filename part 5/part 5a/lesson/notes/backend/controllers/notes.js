@@ -3,8 +3,6 @@ const notesRouter = require('express').Router()
 const Note = require('../models/note')
 const User = require('../models/user')
 
-
-
 notesRouter.get('/', async (request, response) => {
   const notes = await Note
     .find({})
@@ -18,13 +16,14 @@ notesRouter.get('/:id', async (request, response, next) => {
     response.json(note)
   } else {
     response.status(404).end()
-
   }
-
 })
 
 const getTokenFrom = request => {
   const authorization = request.get('authorization')
+
+  console.log('authorization', authorization)
+
   if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
     return authorization.substring(7)
   }
@@ -33,16 +32,25 @@ const getTokenFrom = request => {
 
 notesRouter.post('/', async (request, response, next) => {
   const body = request.body
-  const token = getTokenFrom(request)
+  //TODO: Temporary commenting authentication
+  // const token = getTokenFrom(request)
 
+  // console.log('token', token)
   // console.log('process.env.SECRET', process.env.SECRET);
-  
-  const decodedToken = jwt.verify(token, process.env.SECRET)
-  if (!token || !decodedToken.id) {
-    return response.status(401).json({ error: 'token missing or invalid' })
-  }
-  const user = await User.findById(body.userId)
 
+  // const decodedToken = jwt.verify(token, process.env.SECRET)
+
+  // console.log('decodedToken', decodedToken)
+
+  // if (!token || !decodedToken.id) {
+  //   return response.status(401).json({ error: 'token missing or invalid' })
+  // }
+
+  console.log('body', body)
+  const user = await User.findById(body.userId)
+  console.log('user', user)
+
+  // console.log('decodedToken', decodedToken)
 
 
   const note = new Note({
@@ -50,12 +58,18 @@ notesRouter.post('/', async (request, response, next) => {
     // important: body.important || false,
     important: body.important === undefined ? false : body.important,
     date: new Date(),
-    user: user._id
+    // user: user._id
   })
 
+  console.log('note', note)
+
   const savedNote = await note.save()
-  user.notes = user.notes.concat(savedNote._id)
-  await user.save()
+
+  console.log('savedNote', savedNote)
+
+  // TODO: uncomment
+  // user.notes = user.notes.concat(savedNote._id)
+  // await user.save()
 
   response.json(savedNote)
 })
