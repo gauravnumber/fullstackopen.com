@@ -1,0 +1,14 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 error pnpm": {
+    "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+    "err": {
+      "name": "Error",
+      "message": "No package.json (or package.yaml, or package.json5) was found in \"/home/gaurav/Documents/Github/fullstackopen.com/part 7/part 7f/exercise/exercise 7.17\".",
+      "code": "ERR_PNPM_NO_IMPORTER_MANIFEST_FOUND",
+      "stack": "Error: No package.json (or package.yaml, or package.json5) was found in \"/home/gaurav/Documents/Github/fullstackopen.com/part 7/part 7f/exercise/exercise 7.17\".\n    at readProjectManifest (/opt/node-v14.15.4-linux-x64/pnpm-global/5/node_modules/.pnpm/pnpm@6.13.0/node_modules/pnpm/dist/pnpm.cjs:40586:13)\n    at async Object.readProjectManifestOnly (/opt/node-v14.15.4-linux-x64/pnpm-global/5/node_modules/.pnpm/pnpm@6.13.0/node_modules/pnpm/dist/pnpm.cjs:40590:28)\n    at async Object.readProjectManifestOnly (/opt/node-v14.15.4-linux-x64/pnpm-global/5/node_modules/.pnpm/pnpm@6.13.0/node_modules/pnpm/dist/pnpm.cjs:40809:24)\n    at async Object.handler (/opt/node-v14.15.4-linux-x64/pnpm-global/5/node_modules/.pnpm/pnpm@6.13.0/node_modules/pnpm/dist/pnpm.cjs:122895:24)\n    at async /opt/node-v14.15.4-linux-x64/pnpm-global/5/node_modules/.pnpm/pnpm@6.13.0/node_modules/pnpm/dist/pnpm.cjs:126966:20\n    at async run (/opt/node-v14.15.4-linux-x64/pnpm-global/5/node_modules/.pnpm/pnpm@6.13.0/node_modules/pnpm/dist/pnpm.cjs:126941:34)\n    at async runPnpm (/opt/node-v14.15.4-linux-x64/pnpm-global/5/node_modules/.pnpm/pnpm@6.13.0/node_modules/pnpm/dist/pnpm.cjs:127151:5)\n    at async /opt/node-v14.15.4-linux-x64/pnpm-global/5/node_modules/.pnpm/pnpm@6.13.0/node_modules/pnpm/dist/pnpm.cjs:127143:7"
+    }
+  }
+}
